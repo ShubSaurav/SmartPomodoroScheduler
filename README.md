@@ -276,7 +276,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 If you encounter any issues or have questions:
 - Open an issue on GitHub
-- Contact: [Your Email]
+- Contact: shubhamsaurav2264@gmail.com
 
 ---
 
