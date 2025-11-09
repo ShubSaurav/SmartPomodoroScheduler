@@ -1,0 +1,68 @@
+# Compiled binaries
+SmartPomodoroScheduler
+SmartPomodoroSchedulerCLI
+*.out
+*.exe
+
+# Object files
+*.o
+*.obj
+*.so
+*.dylib
+
+# Compiled Dynamic libraries
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.app
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Data files (optional - comment out if you want to track them)
+# data/*.txt
+
+# Build directories
+build/
+dist/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.local

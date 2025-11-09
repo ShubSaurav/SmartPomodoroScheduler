@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Pomodoro Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="background-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  
+  <div class="container">
+    <h1><i class="fas fa-brain"></i> Smart Pomodoro Scheduler</h1>
+
+    <div class="main-layout">
+      <div class="left-panel">
+        <section class="timer-panel glass-morphism">
+          <h2><i class="fas fa-clock"></i> Pomodoro Timer</h2>
+          <div class="timer-display" id="timer">00:00</div>
+          
+          <div class="timer-modes">
+            <button class="mode-btn active" data-mode="pomodoro">
+              <i class="fas fa-brain"></i> Pomodoro
+            </button>
+            <button class="mode-btn" data-mode="task">
+              <i class="fas fa-tasks"></i> Task
+            </button>
+          </div>
+
+          <div class="timer-presets" id="pomodoroPresets">
+            <button class="preset-btn" data-time="25">25 min</button>
+            <button class="preset-btn" data-time="45">45 min</button>
+            <button class="preset-btn" data-time="60">60 min</button>
+            <div class="custom-timer">
+              <input type="range" id="customTime" min="1" max="120" value="25">
+              <span id="sliderValue">25 min</span>
+            </div>
+          </div>
+
+          <div class="active-task-info" id="activeTaskInfo">
+            <p>No active task</p>
+          </div>
+
+          <div class="timer-controls">
+            <button id="startBtn" class="control-btn">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="pauseBtn" class="control-btn">
+              <i class="fas fa-pause"></i>
+            </button>
+            <button id="resetBtn" class="control-btn">
+              <i class="fas fa-undo"></i>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <div class="right-panel">
+        <section class="task-add glass-morphism">
+          <h2><i class="fas fa-plus-circle"></i> Add New Task</h2>
+          <form id="taskForm" class="task-form">
+            <div class="form-row">
+              <div class="input-group">
+                <i class="fas fa-tasks"></i>
+                <input id="taskName" type="text" placeholder="Enter Task (e.g., Java Assignment)">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group">
+                <i class="fas fa-flag"></i>
+                <select id="taskPriority">
+                  <option value="Critical">Critical</option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <i class="fas fa-clock"></i>
+                <input id="taskEstimatedTime" type="number" min="1" placeholder="Time (min)">
+              </div>
+            </div>
+            <button type="submit" id="addTask" class="btn-primary">
+              <i class="fas fa-plus"></i> Add Task
+            </button>
+          </form>
+        </section>
+
+        <section class="task-list glass-morphism">
+          <div class="section-header">
+            <h2><i class="fas fa-list-check"></i> Your Tasks</h2>
+            <div class="task-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="Critical">Critical</button>
+              <button class="filter-btn" data-filter="High">High</button>
+              <button class="filter-btn" data-filter="Medium">Medium</button>
+              <button class="filter-btn" data-filter="Low">Low</button>
+            </div>
+          </div>
+          <div id="taskCards" class="cards"></div>
+        </section>
+
+        <section class="completed-tasks glass-morphism">
+          <div class="section-header">
+            <h2><i class="fas fa-check-double"></i> Completed Tasks</h2>
+          </div>
+          <div id="completedTaskCards" class="cards"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
